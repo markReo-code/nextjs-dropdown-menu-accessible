@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js Dropdown Menu Accessible
 
-## Getting Started
+## 概要
+このプロジェクトは、Next.js（App Router）と TypeScript を用いて構築した、レスポンシブ対応かつアクセシビリティに配慮したドロップダウン付きグローバルナビゲーションメニューの実装例です。
+フロントエンドエンジニアとしての技術力を示すために、UIの操作性・コードの保守性・アクセシビリティを意識した設計にしています。
 
-First, run the development server:
+## 技術スタック
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Next.js 15.2.4（App Router）
+- TypeScript
+- CSS Modules
+- React Hooks
+- HTML / WAI-ARIA（アクセシビリティ対応）
+- Node.js（開発環境）
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 主な特徴
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js App Router 構成（app/ ディレクトリ）対応
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- TypeScript 使用 / 外部状態管理ライブラリなし
 
-## Learn More
+- レスポンシブ対応（PC・SP 両対応）
+  ・PC：クリックまたはキーボード（Enterキー）でドロップダウンメニュー操作可能
+  ・SP：ハンバーガーメニュー（Drawer）展開時にドロップダウンメニュー表示
 
-To learn more about Next.js, take a look at the following resources:
+- アクセシビリティ対応
+  ・`aria-expanded`, `aria-hidden`, `aria-label` などの適切な属性管理
+  ・Drawer展開時のフォーカストラップ（Tabキーの巡回制御）をカスタムフックで実装
+  ・Escキーで Drawer 閉じる操作に対応
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ユーザー操作に応じた状態リセット処理
+  ・ページ遷移時にドロップダウンメニューや Drawerの状態を自動でリセット
+  　（`pcActiveIndex`, `drawerActiveIndex`, `isOpen` を初期化）
+  ・ナビゲーション外をクリック時、ドロップダウンメニューを自動で閉じる
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- 共通スタイル以外は、CSS Modules によるスコープ付きスタイル設計
 
-## Deploy on Vercel
+- 機能ごとにカスタムフックを分離し、再利用性と保守性を担保
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## スクリーンショット
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### パソコン表示
+#### 通常時
+![PC Closed](public/pc-dropdown-close.png)
+
+#### ドロップダウンメニュー展開時
+![PC Open](public/pc-dropdown-open.png)
+
+### スマートフォン表示
+#### Drawer展開時の通常時
+![SP Closed](public/sp-dropdown-close.png)
+
+#### Drawer展開時のドロップダウン展開時
+![SP Closed](public/sp-dropdown-open.png)
+
+## 使い方
+
+1. Node.js をインストール（推奨バージョン: 18.x以上）
+
+2. リポジトリをクローン
+
+   git clone https://github.com/your-username/nextjs-dropdown-menu-accessible.git
+   
+   cd nextjs-dropdown-menu-accessible
+
+3. 依存パッケージのインストール
+
+    npm install
+
+4. 開発サーバーの起動
+
+5. ブラウザで http://localhost:3000 にアクセスして動作を確認できます。

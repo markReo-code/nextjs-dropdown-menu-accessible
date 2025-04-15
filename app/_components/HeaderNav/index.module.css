@@ -1,0 +1,36 @@
+.nav {
+
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.item {
+    font-size: 1.4rem;
+    position: relative;
+}
+
+.link {
+    display: block;
+    font-size: 1.4rem;
+    padding: 20px;
+}
+
+.label {
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .list {
+        column-gap: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav {
+       display: none;
+    }
+}

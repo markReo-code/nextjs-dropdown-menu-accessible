@@ -1,0 +1,53 @@
+.button {
+    position: relative;
+    z-index: 60;
+    width: 40px;
+    height: 40px;
+    right: -10px;
+    /* border: 1px solid #292929; */
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.wrap {
+    width: 20px;
+    height: 5px;
+    position: absolute;
+}
+
+.line {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #111111;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s;
+}
+
+.line:nth-child(1) {
+    top: -4px;
+}
+
+.line:nth-child(2) {
+    top: 4px;
+}
+
+.open .line:nth-child(1) {
+    background-color: #ffffff;
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+.open .line:nth-child(2) {
+    background-color: #ffffff;
+    top: 0;
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width: 768px) {
+    .button {
+        display: flex;
+    }
+}

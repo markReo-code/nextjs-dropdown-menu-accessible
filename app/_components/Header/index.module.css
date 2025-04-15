@@ -1,0 +1,43 @@
+.header {
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid #292929;
+}
+
+.inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 3.5vw;
+}
+
+.logo {
+    font-size: 20px;
+    z-index: 60;
+    transition: color 0.2s ease;
+}
+
+.logo.open {
+    color: #ffffff;
+}
+
+.logo.open a:focus-visible {
+    outline: 2px solid -webkit-focus-ring-color;
+}
+
+.header__nav {
+
+}
+
+.header__item {
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 768px) {
+    .inner {
+        padding: 16px 30px;
+    }
+
+}
