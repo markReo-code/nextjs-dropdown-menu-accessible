@@ -1,3 +1,8 @@
+export const metadata = {
+    title: "新卒採用"
+}
+  
+
 export default function Page() {
     return (
         <div>

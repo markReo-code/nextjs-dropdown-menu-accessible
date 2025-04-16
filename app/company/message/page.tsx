@@ -1,3 +1,7 @@
+export const metadata = {
+    title: "代表メッセージ"
+}
+
 export default function Page() {
     return (
         <div>

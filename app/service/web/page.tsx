@@ -1,3 +1,7 @@
+export const metadata = {
+    title: "Webサイト制作"
+}
+
 export default function Page() {
     return (
         <div>

@@ -4,7 +4,6 @@ export function useDrawerFocusTrap(
     isOpen: boolean,
     trapRef: React.RefObject<HTMLElement | null>
 ) {
-
     useEffect(() => {
         if (!isOpen) return;
 

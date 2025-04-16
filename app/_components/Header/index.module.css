@@ -27,10 +27,6 @@
     outline: 2px solid -webkit-focus-ring-color;
 }
 
-.header__nav {
-
-}
-
 .header__item {
     font-size: 1.4rem;
 }
@@ -39,5 +35,4 @@
     .inner {
         padding: 16px 30px;
     }
-
 }

@@ -1,3 +1,7 @@
+export const metadata = {
+    title: "アプリ開発"
+}
+
 export default function Page() {
     return (
         <div>

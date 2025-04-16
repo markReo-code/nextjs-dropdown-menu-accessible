@@ -12,7 +12,6 @@ export default function DrawerButton({isOpen, setIsOpen}: Props) {
 
     const toggleMenu = () => {
         setIsOpen(prev => !prev);
-        // setIsOpen(!isOpen)
     }
 
   return (
@@ -22,7 +21,6 @@ export default function DrawerButton({isOpen, setIsOpen}: Props) {
       aria-controls="drawer"
       aria-expanded={isOpen}
       aria-label={isOpen ? "メニューを閉じる" : "メニューを開く"}
-     
       type="button"
     >
       <div className={styles.wrap}>

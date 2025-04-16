@@ -53,7 +53,6 @@ export default function DropdownMenu({
         id={panelId}
         className={`${styles.panel} ${isActive ? styles.active : ""}`}
         aria-hidden={!isActive}
-        // inert={!isActive ? "" : undefined}
       >
         <div className={styles.panelInner}>
           <ul className={styles.list}>

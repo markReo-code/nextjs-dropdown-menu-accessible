@@ -31,7 +31,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.inner} ref={headerInnerRef}>
         <div className={`${styles.logo} ${isOpen ? styles.open : ""}`}>
-          <Link href="/">Brand</Link>
+          <Link href="/" onClick={() => setIsOpen(false)}>Brand</Link>
         </div>
 
         <HeaderNav

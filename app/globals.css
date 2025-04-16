@@ -1,6 +1,6 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --primary-color: #111111;
 }
 
 * {
@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--primary-color);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -65,7 +65,7 @@ img {
   }
 }
 
-
-/* next-route-announcer {
+/* Next.js　デフォルトの設定打消し　*/
+next-route-announcer {
   display: none !important;
-} */
+}
