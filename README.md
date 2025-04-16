@@ -32,7 +32,7 @@ UIの操作性・コードの保守性・アクセシビリティを意識した
      → SPAにありがちな **「前ページのフォーカスが残る問題」**を防ぎ、**MPAのように自然でわかりやすいキーボードナビゲーション体験**を実現しています。
 
 - **ユーザー操作に応じた状態リセット処理**  
-  ・ページ遷移時にドロップダウンメニューや Drawerの状態を**自動でリセット** 
+  ・ページ遷移時にドロップダウンメニューや Drawerの状態を**自動でリセット**  
   　（`pcActiveIndex`, `drawerActiveIndex`, `isOpen` を初期化）  
   ・ナビゲーション外をクリックした際、ドロップダウンメニューを自動で閉じる
 
@@ -63,7 +63,7 @@ UIの操作性・コードの保守性・アクセシビリティを意識した
 
 2. リポジトリをクローン
 
-   git clone https://github.com/your-username/nextjs-dropdown-menu-accessible.git
+   git clone https://github.com/markReo-code/nextjs-dropdown-menu-accessible.git
    
    cd nextjs-dropdown-menu-accessible
 
